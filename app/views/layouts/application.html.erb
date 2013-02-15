@@ -7,15 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-	<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-    <a class="brand" href="#"> Treebook</a>
-    <ul class="nav">
-    <li class="active"><%= link_to "All Statuses", statuses_path %></li>
+<!-- compare this with your menu -->
+<div class="navbar navbar-static-top">
+<div class="container">
+  <div class="navbar-inner">
+    <a class="brand" href="<%= root_url %>">Treebook</a>
+    <ul class="nav pull-right">
+      <li class="active"><%= link_to "All Statuses", statuses_path %></li>
     </ul>
-    </div>
-    </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+	<!-- <div class="navbar navbar-fixed-top">
+    		<div class="navbar-inner">
+    			<a class="brand" href="#"> Treebook</a>
+    			<ul class="nav">
+    				<li class="active"><%= link_to "All Statuses", statuses_path %></li>
+    			</ul>
+    		</div>
+    	</div> -->
 		<%= yield %>
 	</div>
 </body>
